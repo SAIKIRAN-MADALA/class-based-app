@@ -7,23 +7,15 @@ class App extends React.Component {
    super();
    this.state={
      monsters:[
-       {
-         name: "Frankestein",
-          id:"asc1"
-        
-        },
-       {
-         name:"Dracula",
-          id:"asc2"
-        },
-       {
-         name:"Zombie",
-         id:"asc3"
-       }
      ]
    };
  }
-
+ //Life Cycle Methods
+componentDidMount(){
+  fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response=> response.json())
+  .then(users=> this.setState({monsters:users}));
+}
   render(){
     return (
       <div className="App">
