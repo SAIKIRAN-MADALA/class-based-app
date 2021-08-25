@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React  from 'react';
+import { CardList } from './Components/card-list/card-list.component';
 
 class App extends React.Component {
  constructor(){
@@ -19,15 +20,10 @@ componentDidMount(){
   render(){
     return (
       <div className="App">
-        {
-          this.state.monsters.map(
-         monster=> <h1 key={monster.id}> {monster.name}</h1> 
-         )}
+        <CardList monsters={this.state.monsters} />
       </div>
     );
-
   }
 } 
-
 
 export default App;
