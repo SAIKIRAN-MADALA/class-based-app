@@ -24,8 +24,9 @@ componentDidMount() {
         ); 
     return (
       <div className="App">
+      <h1> Monsters ROLDEX</h1>
         <SearchBox 
-        placeholder_name="Search Monsters" 
+        placeholder="Search Monsters" 
         ChangeEvent= {e => this.setState( { searchField: e.target.value } ) } 
             />
         <CardList monsters={filtered_Monsters} />
