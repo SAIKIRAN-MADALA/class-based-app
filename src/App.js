@@ -34,5 +34,4 @@ componentDidMount() {
     );
   }
 } 
-
 export default App;
